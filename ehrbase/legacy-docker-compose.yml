@@ -1,0 +1,24 @@
+version: "3"
+services:
+  ehrbase:
+    image: ehrbase/ehrbase:latest
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/ehrbase
+      - SPRING_DATASOURCE_USERNAME=ehrbase
+      - SPRING_DATASOURCE_PASSWORD=ehrbase
+      - SERVER_AQLCONFIG_USEJSQUERY=false
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+  db:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ehrbase
+      - POSTGRES_USER=ehrbase
+      - POSTGRES_PASSWORD=ehrbase
+      - POSTGRES_USER_ADMIN=ehrbase
+volumes:
+  db-data:
