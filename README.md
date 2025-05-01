@@ -23,7 +23,7 @@ openEHR is an open standard specification in health informatics that describes t
    - Export the template as `.opt` file (e.g. `petetest.opt`).
 3. Generate a UUID for the template.
 
-### Step 2: Upload the Template
+### Step 2: Upload e.g. the petetest.opt Template
 1. Use a REST client (e.g. [Postman](https://www.postman.com/) recomended - take the working template in this repository or [Insomnia](https://insomnia.rest/)) to upload the `.opt` file.
 2. Endpoint: `http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4`
 3. Use Basic Authentication with credentials from `.env.ehrbase`:
@@ -41,7 +41,7 @@ curl -X POST \
 
 ### Step 3: Create an EHR Record
 1. Use the composition endpoint to create an EHR record (content from the openehrbase rest api docs):
-   - [Body for Rest call](https://docs.ehrbase.org/api/hip-ehrbase/openehr#tag/EHR/operation/createEhr)
+   - [Body / Payload for Rest call](https://docs.ehrbase.org/api/hip-ehrbase/openehr#tag/EHR/operation/createEhr)
    - Endpoint: `http://localhost:8080/ehrbase/rest/openehr/v1/ehr/`
 2. Retrieve the EHR ID from the response.
 
