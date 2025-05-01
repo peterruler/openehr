@@ -5,7 +5,7 @@
 - [Medblocks YouTube Playlist](https://www.youtube.com/watch?v=kOU2HGqK23o&list=PLUr-PTsPYKV4Cl7gUe5sPoCQEfRJ3FpWW) by Sidarth Ramesh - this document is based on these clips
 - [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/)
 - [openEHR Designer](https://tools.openehr.org/designer/#)
-- [EHRbase Documentation](https://docs.ehrbase.org/docs/EHRbase/openEHR-Introduction/Template) - this document is based explains the four steps from this documentation
+- [EHRbase Documentation](https://docs.ehrbase.org/docs/EHRbase/openEHR-Introduction/Template) - this document explains the four steps from this documentation
 - [EHRbase GitHub Repository](https://github.com/ehrbase/ehrbase/)
 
 ---
