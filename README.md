@@ -71,7 +71,7 @@ curl -X POST \
     ```
 - Alternatively, download [EHRbase](https://www.ehrbase.org/download).
 
-### Medblock, use instead of openehrbase SDK
+### Medblocks, use instead of openehrbase SDK
 - Clone the repository: `git clone https://github.com/medblocks/all-forms`
 - Run:
   ```bash
