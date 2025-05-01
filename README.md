@@ -2,26 +2,25 @@
 
 ## Online Resources
 
-- [Medblocks YouTube Playlist](https://www.youtube.com/watch?v=kOU2HGqK23o&list=PLUr-PTsPYKV4Cl7gUe5sPoCQEfRJ3FpWW) by Sidarth Ramesh
+- [Medblocks YouTube Playlist](https://www.youtube.com/watch?v=kOU2HGqK23o&list=PLUr-PTsPYKV4Cl7gUe5sPoCQEfRJ3FpWW) by Sidarth Ramesh - this document is based on these clips
 - [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/)
 - [openEHR Designer](https://tools.openehr.org/designer/#)
-- [EHRbase Documentation](https://docs.ehrbase.org/docs/EHRbase/openEHR-Introduction/Template)
+- [EHRbase Documentation](https://docs.ehrbase.org/docs/EHRbase/openEHR-Introduction/Template) - this document is based explains the four steps from this documentation
 - [EHRbase GitHub Repository](https://github.com/ehrbase/ehrbase/)
-- [EHRbase Docker Hub](https://hub.docker.com/r/ehrbase/ehrbase)
 
 ---
 
 ## Steps to Set Up and Use EHRbase
 
 ### Step 1: Prepare Archetypes and Templates
-1. Download archetypes from the [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/).
+1. Download (Bulk export) archetypes from the [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/).
 2. Use the [openEHR Designer](https://tools.openehr.org/designer/#) to create a template:
-   - Deactivate all properties except systolic and diastolic blood pressure.
-   - Export the template as `.opt` file (e.g., `petetest.opt`).
+   - Deactivate all properties (null 0:0  to all cardinalities) except systolic and diastolic blood pressure.
+   - Export the template as `.opt` file (e.g. `petetest.opt`).
 3. Generate a UUID for the template.
 
 ### Step 2: Upload the Template
-1. Use a REST client (e.g., [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/)) to upload the `.opt` file.
+1. Use a REST client (e.g. [Postman](https://www.postman.com/) recomended or [Insomnia](https://insomnia.rest/)) to upload the `.opt` file.
 2. Endpoint: `http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4`
 3. Use Basic Authentication with credentials from `.env.ehrbase`:
    - Username: `ehrbase-user`
@@ -37,7 +36,8 @@ curl -X POST \
 ```
 
 ### Step 3: Create an EHR Record
-1. Use the composition endpoint to create an EHR record:
+1. Use the composition endpoint to create an EHR record (content from the openehrbase rest api docs):
+   - [Body for Rest call](https://docs.ehrbase.org/api/hip-ehrbase/openehr#tag/EHR/operation/createEhr)
    - Endpoint: `http://localhost:8080/ehrbase/rest/openehr/v1/ehr/`
 2. Retrieve the EHR ID from the response.
 
@@ -53,10 +53,10 @@ curl -X POST \
 
 ## Software
 
-### Clinical Knowledge Manager (CKM)
+### Clinical Knowledge Manager (CKM) bulk export all archetypes
 - [CKM](https://ckm.openehr.org/ckm/)
 
-### Archetype Designer
+### Archetype Designer (import all archetypes & generate opt template)
 - [openEHR Designer](https://tools.openehr.org/designer/#)
 
 ### EHRbase Server
@@ -71,7 +71,7 @@ curl -X POST \
     ```
 - Alternatively, download [EHRbase](https://www.ehrbase.org/download).
 
-### Medblocks
+### Medblock, use instead of openehrbase SDK
 - Clone the repository: `git clone https://github.com/medblocks/all-forms`
 - Run:
   ```bash
@@ -103,11 +103,8 @@ curl -X POST \
 - Create EHR Record: `http://localhost:8080/ehrbase/rest/openehr/v1/ehr/`
 - Retrieve Template: `http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4/petetest`
 
-### Postgres Documentation
-- [Postgres Docker Hub](https://hub.docker.com/_/postgres)
-
 ### EHR Tools
-- [Cabolabs Toolkit](https://toolkit.cabolabs.com/)
+- [Cabolabs Toolkit](https://toolkit.cabolabs.com/) - To optionally convert *.opt XML-file to json
 
 ### EHRbase SDK
 - [EHRbase SDK](https://github.com/ehrbase/openEHR_SDK)
