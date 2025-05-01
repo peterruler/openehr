@@ -64,7 +64,7 @@ curl -X POST \
 - [openEHR Designer](https://tools.openehr.org/designer/#)
 
 ### EHRbase Server
-- Clone the repository: `git clone https://github.com/ehrbase/ehrbase/` (optionally installl via docker compose instead)
+- Clone the repository: `git clone https://github.com/ehrbase/ehrbase/` (optionally, install via docker compose instead)
 - create a `.env.ehrbase` file (copy it from this repo) in the root of the ehrbase-directory
 - Install via `docker-compose.yml` (recommended, copy from this repository in ehrbase folder):
   - Ensure [Docker Desktop](https://www.docker.com/products/docker-desktop/) is installed.
