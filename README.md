@@ -24,7 +24,7 @@ openEHR is an open standard specification in health informatics that describes t
 3. Generate a UUID for the template.
 
 ### Step 2: Upload the Template
-1. Use a REST client (e.g. [Postman](https://www.postman.com/) recomended or [Insomnia](https://insomnia.rest/)) to upload the `.opt` file.
+1. Use a REST client (e.g. [Postman](https://www.postman.com/) recomended - take the working template in this repository or [Insomnia](https://insomnia.rest/)) to upload the `.opt` file.
 2. Endpoint: `http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4`
 3. Use Basic Authentication with credentials from `.env.ehrbase`:
    - Username: `ehrbase-user`
