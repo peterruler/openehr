@@ -1,5 +1,9 @@
 # OpenEHR - Opensource
 
+## Explanation
+From Wikipedia, the free encyclopedia
+openEHR is an open standard specification in health informatics that describes the management and storage, retrieval and exchange of health data in electronic health records (EHRs). In openEHR, all health data for a person is stored in a "one lifetime", vendor-independent, person-centred EHR. The openEHR specifications include an EHR Extract specification but are otherwise not primarily concerned with the exchange of data between EHR-systems as this is the focus of other standards such as EN 13606 and HL7.
+
 ## Online Resources
 
 - [Medblocks YouTube Playlist](https://www.youtube.com/watch?v=kOU2HGqK23o&list=PLUr-PTsPYKV4Cl7gUe5sPoCQEfRJ3FpWW) by Sidarth Ramesh - this document is based on these clips
