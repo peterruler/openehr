@@ -23,7 +23,7 @@ openEHR is an open standard specification in health informatics that describes t
    - Export the template as `.opt` file (e.g. `petetest.opt`).
 3. Generate a UUID for the template.
 
-### Step 2: Upload e.g. the petetest.opt Template
+### Step 2: Upload e.g. the petetest.opt Template (to the previously installed ehrbase server)
 1. Use a REST client (e.g. [Postman](https://www.postman.com/) recomended - take the working template in this repository or [Insomnia](https://insomnia.rest/)) to upload the `.opt` file.
 2. Endpoint: `http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4`
 3. Use Basic Authentication with credentials from `.env.ehrbase`:
@@ -63,7 +63,7 @@ curl -X POST \
 ### Archetype Designer (import all archetypes & generate opt template)
 - [openEHR Designer](https://tools.openehr.org/designer/#)
 
-### EHRbase Server
+### Install EHRbase Server
 - Clone the repository: `git clone https://github.com/ehrbase/ehrbase/` (optionally, install via docker compose instead)
 - create a `.env.ehrbase` file (copy it from this repo) in the root of the ehrbase-directory
 - Install via `docker-compose.yml` (recommended, copy from this repository in ehrbase folder):
